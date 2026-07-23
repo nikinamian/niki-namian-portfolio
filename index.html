@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niki Namian | Software Engineer</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --text-main: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent: #58a6ff;
+            --accent-glow: rgba(88, 166, 255, 0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 5% 10%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Hero Section */
+        header {
+            margin-bottom: 4rem;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #ffffff, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-text {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 800px;
+        }
+
+        h2.section-title {
+            font-size: 2rem;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            color: #fff;
+        }
+
+        /* Grid Layout for Cards */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        /* Card Styling */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px var(--accent-glow);
+            border-color: var(--accent);
+        }
+
+        .card h3 {
+            color: #fff;
+            margin-bottom: 0.25rem;
+            font-size: 1.2rem;
+        }
+
+        .card .company {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        /* Tags for Skills */
+        .tags {
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background-color: rgba(88, 166, 255, 0.1);
+            color: var(--accent);
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Niki Namian</h1>
+        <p class="hero-text">
+            Hi, I'm Niki! I'm an incoming Computer Science student at UC Berkeley and a two-time Software Engineering Intern at NASA JPL. I specialize in integrating AI to automate complex systems and have a strong foundation in teaching Data Structures & Algorithms.
+        </p>
+    </header>
+
+    <main>
+        <!-- Experience Section -->
+        <h2 class="section-title">Experience</h2>
+        <div class="grid-container">
+            
+            <div class="card">
+                <h3>Software Engineering Intern</h3>
+                <span class="company">NASA Jet Propulsion Laboratory</span>
+                <p>Developing Python automation scripts, Machine Learning models, and NLP pipelines to optimize Deep Space Network antenna scheduling.</p>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">NLP</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Student Research Intern</h3>
+                <span class="company">NASA Jet Propulsion Laboratory</span>
+                <p>Engineered virtual test environments with Graph Neural Networks and evaluated next-gen DSP/GPU architectures for space computing.</p>
+                <div class="tags">
+                    <span class="tag">GNNs</span>
+                    <span class="tag">Digital Twins</span>
+                    <span class="tag">GPU Computing</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>SI Leader & CS Tutor</h3>
+                <span class="company">Santa Monica College</span>
+                <p>Mentored 150+ students in Data Structures & Algorithms, streamlining workflows and debugging complex memory issues in C++ and Java.</p>
+                <div class="tags">
+                    <span class="tag">C++</span>
+                    <span class="tag">Java</span>
+                    <span class="tag">Data Structures</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>AI Trainer</h3>
+                <span class="company">Handshake</span>
+                <p>Executed RLHF workflows to align and improve multimodal LLM accuracy across text, image, and video data for frontier AI labs.</p>
+                <div class="tags">
+                    <span class="tag">LLMs</span>
+                    <span class="tag">RLHF</span>
+                    <span class="tag">Data Analysis</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Section -->
+        <h2 class="section-title">Projects</h2>
+        <div class="grid-container">
+            
+            <div class="card">
+                <h3>Ticker Talk AI</h3>
+                <span class="company">Independent Project</span>
+                <p>Engineered a predictive price model forecasting next-close targets and volatility bands by fitting Linear Regression algorithms on rolling time-series datasets.</p>
+                <div class="tags">
+                    <span class="tag">Scikit-learn</span>
+                    <span class="tag">Pandas</span>
+                    <span class="tag">REST APIs</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>LensAI</h3>
+                <span class="company">Independent Project</span>
+                <p>Engineered a multimodal vision application to generate comprehensive, contextual photo analyses with exponential backoff and session memory.</p>
+                <div class="tags">
+                    <span class="tag">Gemini 2.5 Flash API</span>
+                    <span class="tag">Computer Vision</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
